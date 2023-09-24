@@ -1,0 +1,30 @@
+<%- include('head') %>
+
+    <div>
+        <h1>ユーザー編集</h1>
+
+        <form action="/update/<%= userTable.id %>" method="post">
+            <div>
+                <p>
+                    <label>name</label>
+                    <input type="text" name="updateName" value="<%= userTable.name %>">
+                </p>
+                <p>
+                    <label>email</label>
+                    <input type="email" name="updateMail" value="<%= userTable.email %>">
+                </p>
+                <p>
+                    <label>password</label>
+                    <input type="password" name="updatePass" value="<%= userTable.password %>">
+                </p>
+            </div>
+            
+            <div>
+                <input type="submit" value="編集">
+            </div>
+        </form>
+        <a href="/admin">一覧にもどる</a>
+    </div>
+
+</body>
+</html>
